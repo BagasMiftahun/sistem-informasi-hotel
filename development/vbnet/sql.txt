@@ -1,0 +1,45 @@
+-- Tabel Pelanggan
+CREATE TABLE Pelanggan (
+IdPelanggan INT IDENTITY(1,1) PRIMARY KEY,
+NamaPelanggan VARCHAR(50),
+Alamat VARCHAR(100),
+NoTelepon VARCHAR(20)
+);
+
+-- Tabel Kamar
+CREATE TABLE Kamar (
+IdKamar INT IDENTITY(1,1) PRIMARY KEY,
+NamaKamar VARCHAR(50),
+Harga DECIMAL(20),
+Status VARCHAR(10)
+);
+
+-- Tabel Transaksi
+CREATE TABLE Transaksi (
+IdTransaksi INT IDENTITY(1,1) PRIMARY KEY,
+IdPelanggan INT,
+IdKamar INT,
+TanggalPesan DATE,
+TanggalCheckIn DATE,
+TanggalCheckOut DATE,
+JumlahTamu INT,
+TotalHarga DECIMAL(20),
+FOREIGN KEY (IdPelanggan) REFERENCES Pelanggan(IdPelanggan),
+FOREIGN KEY (IdKamar) REFERENCES Kamar(IdKamar)
+);
+
+-- Tabel Pengeluaran
+CREATE TABLE Pengeluaran (
+IdPengeluaran INT IDENTITY(1,1) PRIMARY KEY,
+Keterangan VARCHAR(100),
+Jumlah DECIMAL(20)
+);
+
+-- Tabel LaporanBulanan
+CREATE TABLE LaporanBulanan (
+IdLaporan INT IDENTITY(1,1) PRIMARY KEY,
+Tanggal DATE,
+Pendapatan DECIMAL(20),
+Pengeluaran DECIMAL(20),
+LabaBersih DECIMAL(20)
+);

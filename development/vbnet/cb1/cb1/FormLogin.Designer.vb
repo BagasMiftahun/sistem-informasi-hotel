@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class FormLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,8 +26,9 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonMasuk = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnLogout = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,17 +72,18 @@ Partial Class Form1
     "an fasilitas yang modern, menciptakan suasana yang nyaman dan tak terlupakan bag" &
     "i para tamu"
         '
-        'Button1
+        'ButtonMasuk
         '
-        Me.Button1.BackColor = System.Drawing.Color.SpringGreen
-        Me.Button1.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(32, 290)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 35)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Checking Now"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ButtonMasuk.BackColor = System.Drawing.Color.SpringGreen
+        Me.ButtonMasuk.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonMasuk.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMasuk.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ButtonMasuk.Location = New System.Drawing.Point(32, 290)
+        Me.ButtonMasuk.Name = "ButtonMasuk"
+        Me.ButtonMasuk.Size = New System.Drawing.Size(117, 35)
+        Me.ButtonMasuk.TabIndex = 4
+        Me.ButtonMasuk.Text = "Checking Now"
+        Me.ButtonMasuk.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -93,18 +95,32 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Form1
+        'BtnLogout
+        '
+        Me.BtnLogout.BackColor = System.Drawing.Color.SpringGreen
+        Me.BtnLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnLogout.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogout.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.BtnLogout.Location = New System.Drawing.Point(635, 12)
+        Me.BtnLogout.Name = "BtnLogout"
+        Me.BtnLogout.Size = New System.Drawing.Size(74, 24)
+        Me.BtnLogout.TabIndex = 7
+        Me.BtnLogout.Text = "Keluar"
+        Me.BtnLogout.UseVisualStyleBackColor = False
+        '
+        'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(732, 450)
+        Me.Controls.Add(Me.BtnLogout)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonMasuk)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.Name = "FormLogin"
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -115,6 +131,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonMasuk As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BtnLogout As Button
 End Class

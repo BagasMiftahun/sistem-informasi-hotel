@@ -51,7 +51,7 @@ Public Class FormLaporan
     End Sub
 
     ' Event klik tombol Tambah Laporan
-    Private Sub BtnTambahLaporan_Click(sender As Object, e As EventArgs)
+    Private Sub BtnTambahLaporan_Click(sender As Object, e As EventArgs) Handles BtnTambahLaporan.Click
         ' Validasi input data
         If String.IsNullOrEmpty(dtpTanggal.Value) Then
             MessageBox.Show("Tanggal Laporan harus diisi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -86,7 +86,7 @@ Public Class FormLaporan
     End Sub
 
     ' Event klik tombol Ubah Kamar
-    Private Sub BtnUbahLaporan_Click(sender As Object, e As EventArgs)
+    Private Sub BtnUbahLaporan_Click(sender As Object, e As EventArgs) Handles BtnUpdateLaporan.Click
         ' Validasi pemilihan data pada DataGridView
         If DataGridViewLaporan.SelectedRows.Count = 0 Then
             MessageBox.Show("Pilih data Laporan terlebih dahulu.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -124,7 +124,7 @@ Public Class FormLaporan
     End Sub
 
     ' Event klik tombol Hapus Kamar
-    Private Sub BtnHapusLaporan_Click(sender As Object, e As EventArgs)
+    Private Sub BtnHapusLaporan_Click(sender As Object, e As EventArgs) Handles BtnHapusLaporan.Click
         ' Validasi pemilihan data pada DataGridView
         If DataGridViewLaporan.SelectedRows.Count = 0 Then
             MessageBox.Show("Pilih data Laporan terlebih dahulu.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
